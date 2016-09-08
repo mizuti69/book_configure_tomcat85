@@ -1,0 +1,44 @@
+# Javaのインストール
+Oracle JAVAより最新のJDKをインストールします。  
+http://www.oracle.com/technetwork/java/javase/downloads/index.html  
+
+ここではRPMパッケージを選択しインストールします。  
+
+```
+# yum localinstall jdk-8uXX-linux-x64.rpm
+```
+
+RPMパッケージはインストールされると`/usr/java`配下にインストールされます。  
+
+```
+# ls -l /usr/java/
+合計 4
+lrwxrwxrwx. 1 root root   16  6月 27 21:32 default -> /usr/java/latest
+drwxr-xr-x. 9 root root 4096  6月 27 21:31 jdk1.8.0_91
+lrwxrwxrwx. 1 root root   21  6月 27 21:32 latest -> /usr/java/jdk1.8.0_91
+```
+
+そしてバイナリパッケージでインストールしたときと同じように、  
+RPM版は`alternatives`でパスを通しています。  
+
+```
+# alternatives --config java
+
+1 プログラムがあり 'java' を提供します。
+
+  選択       コマンド
+-----------------------------------------------
+*+ 1           /usr/java/jdk1.8.0_91/jre/bin/java
+
+Enter を押して現在の選択 [+] を保持するか、選択番号を入力します:
+```
+
+コマンドパス  
+
+```
+# which java
+/usr/bin/java
+
+# ls -l /usr/bin/java
+lrwxrwxrwx. 1 root root 22  9月  8 17:21 /usr/bin/java -> /etc/alternatives/java
+```
