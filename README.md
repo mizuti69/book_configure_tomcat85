@@ -1,1 +1,1 @@
-# Introduction
+<img src="styles/generate.png" />

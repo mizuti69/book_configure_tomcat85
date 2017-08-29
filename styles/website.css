@@ -1,3 +1,27 @@
 body,h1,h2,h3,ul,p,li {
-  font-family:"Lucida Grande", "Lucida Sans Unicode", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Helvetica, Arial, Verdana, sans-serif;
+  font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+}
+
+.comments-section * {
+  font-size: 14px;
+}
+
+.book-summary * {
+  color: white !important;
+  background-color: #3B170B; 
+}
+
+.chapter * {
+  font-size: 14px;
+}
+
+h1 {
+  padding: .25em 0 .5em .75em;
+  border-bottom: 2px solid #D8D8D8;
+}
+
+h2,h3,h4,h5 {
+  padding: .25em 0 .5em .75em;
+  border-left: 10px solid #FFBE00;
+  border-bottom: 2px solid #D8D8D8;
 }
