@@ -1,0 +1,418 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>サーバ設定 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3.configure_db.html" />
+    
+    
+    <link rel="prev" href="1.configure_basic.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索すると入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1.install/">
+            
+                <a href="../1.install/">
+            
+                    
+                    Tomcatの導入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1.install/1.install_tomcat.html">
+            
+                <a href="../1.install/1.install_tomcat.html">
+            
+                    
+                    Tomcatのインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1.install/2.install_jsvc.html">
+            
+                <a href="../1.install/2.install_jsvc.html">
+            
+                    
+                    Tomcatnの自動起動設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Tomcatの設定
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1.configure_basic.html">
+            
+                <a href="1.configure_basic.html">
+            
+                    
+                    基本設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="2.configure_server.html">
+            
+                <a href="2.configure_server.html">
+            
+                    
+                    サーバ設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="3.configure_db.html">
+            
+                <a href="3.configure_db.html">
+            
+                    
+                    DB接続設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="5.configure_manager.html">
+            
+                <a href="5.configure_manager.html">
+            
+                    
+                    マネージャー設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="6.configure_apache.html">
+            
+                <a href="6.configure_apache.html">
+            
+                    
+                    Apache連携設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GitBookで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >サーバ設定</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x30B5;&#x30FC;&#x30D0;&#x8A2D;&#x5B9A;">&#x30B5;&#x30FC;&#x30D0;&#x8A2D;&#x5B9A;</h1>
+<h2 id="&#x505C;&#x6B62;&#x30DD;&#x30FC;&#x30C8;&#x306E;&#x5909;&#x66F4;">&#x505C;&#x6B62;&#x30DD;&#x30FC;&#x30C8;&#x306E;&#x5909;&#x66F4;</h2>
+<p>Tomcat&#x306E;&#x5229;&#x7528;&#x30DD;&#x30FC;&#x30C8;&#x3092;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x304B;&#x3089;&#x5909;&#x66F4;<br>JSVC&#x8D77;&#x52D5;&#x306E;&#x5834;&#x5408;&#x306F;&#x5229;&#x7528;&#x3057;&#x306A;&#x3044;&#x305F;&#x3081;&#x4E0D;&#x8981;  </p>
+<pre><code class="lang-xml"># vim ${CATALINA_HOME}/conf/server.xml
+
+<span class="hljs-tag">&lt;<span class="hljs-name">Server</span> <span class="hljs-attr">port</span>=<span class="hljs-string">&quot;8010&quot;</span> <span class="hljs-attr">shutdown</span>=<span class="hljs-string">&quot;SHUTDOWN&quot;</span>&gt;</span>
+</code></pre>
+<h2 id="ajp&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x30FC;&#x306E;&#x8A2D;&#x5B9A;">AJP&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x30FC;&#x306E;&#x8A2D;&#x5B9A;</h2>
+<p>AJP&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x30FC;&#x7D4C;&#x7531;&#x3067;&#x30D5;&#x30ED;&#x30F3;&#x30C8;WEB&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x304B;&#x3089;&#x9023;&#x643A;&#x3059;&#x308B;&#x969B;&#x306E;&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x30FC;&#x3092;&#x8A2D;&#x5B9A;<br>&#x5FC5;&#x8981;&#x306B;&#x3088;&#x308A;&#x30DD;&#x30FC;&#x30C8;&#x3092;&#x5206;&#x3051;&#x3066;&#x8907;&#x6570;&#x306E;&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x30FC;&#x3092;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x4E8B;&#x3082;&#x53EF;&#x80FD;<br>&#x6700;&#x4F4E;&#x73FE;&#x4E0B;&#x8A18;&#x306E;&#x5024;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x3066;&#x304A;&#x304D;&#x307E;&#x3059;&#x3002;  </p>
+<pre><code class="lang-xml"># vim ${CATALINA_HOME}/conf/server.xml
+
+<span class="hljs-tag">&lt;<span class="hljs-name">Connector</span> <span class="hljs-attr">port</span>=<span class="hljs-string">&quot;8080&quot;</span> <span class="hljs-attr">protocol</span>=<span class="hljs-string">&quot;AJP/1.3&quot;</span>
+           <span class="hljs-attr">proxyName</span>=<span class="hljs-string">&quot;www.localdomain&quot;</span> <span class="hljs-attr">proxyPort</span>=<span class="hljs-string">&quot;443&quot;</span>
+           <span class="hljs-attr">redirectPort</span>=<span class="hljs-string">&quot;8080&quot;</span>
+           <span class="hljs-attr">scheme</span>=<span class="hljs-string">&quot;https&quot;</span> <span class="hljs-attr">secure</span>=<span class="hljs-string">&quot;true&quot;</span>
+           <span class="hljs-attr">connectionTimeout</span>=<span class="hljs-string">&quot;60000&quot;</span> <span class="hljs-attr">maxThreads</span>=<span class="hljs-string">&quot;256&quot;</span> /&gt;</span>
+</code></pre>
+<ul>
+<li>port : &#x30EA;&#x30B9;&#x30CB;&#x30F3;&#x30B0;&#x30DD;&#x30FC;&#x30C8;&#x3092;&#x6307;&#x5B9A;</li>
+<li>proxyName : &#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30EA;&#x30C0;&#x30A4;&#x30EC;&#x30AF;&#x30C8;&#x6642;&#x306B;&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x306B;&#x8FD4;&#x3059;URL&#x540D;</li>
+<li>ProxyPort : &#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30EA;&#x30C0;&#x30A4;&#x30EC;&#x30AF;&#x30C8;&#x6642;&#x306B;&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x306B;&#x8FD4;&#x3059;&#x30DD;&#x30FC;&#x30C8;</li>
+<li>scheme : &#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x30FC;&#x306E;&#x30D7;&#x30ED;&#x30C8;&#x30B3;&#x30EB;&#x5C5E;&#x6027;&#x3092;&#x6307;&#x5B9A;  </li>
+<li>secure : &#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x30FC;&#x306E;&#x30D7;&#x30ED;&#x30C8;&#x30B3;&#x30EB;&#x5C5E;&#x6027;&#x304C;SSL&#x306E;&#x5834;&#x5408;true&#x3092;&#x6307;&#x5B9A;</li>
+<li>connectionTimeout : &#x30B3;&#x30CD;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x30BF;&#x30A4;&#x30E0;&#x30A2;&#x30A6;&#x30C8;&#x5024;&#xFF08;&#x30DF;&#x30EA;&#x79D2;&#xFF09;</li>
+<li>maxThreads : &#x6700;&#x5927;&#x540C;&#x6642;&#x63A5;&#x7D9A;&#x6570;  </li>
+</ul>
+<p><a href="https://tomcat.apache.org/tomcat-8.0-doc/config/http.html" target="_blank">https://tomcat.apache.org/tomcat-8.0-doc/config/http.html</a>  </p>
+<h2 id="http&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x30FC;&#x306E;&#x8A2D;&#x5B9A;">HTTP&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x30FC;&#x306E;&#x8A2D;&#x5B9A;</h2>
+<p>HTTP&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x30FC;&#x7D4C;&#x7531;&#x3067;&#x63A5;&#x7D9A;&#x3059;&#x308B;&#x5834;&#x5408;&#x306E;&#x8A2D;&#x5B9A;<br>&#x6700;&#x4F4E;&#x73FE;&#x4E0B;&#x8A18;&#x306E;&#x5024;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x3066;&#x304A;&#x304F;  </p>
+<pre><code class="lang-xml"># vim ${CATALINA_HOME}/conf/server.xml
+
+<span class="hljs-tag">&lt;<span class="hljs-name">Connector</span> <span class="hljs-attr">port</span>=<span class="hljs-string">&quot;8080&quot;</span> <span class="hljs-attr">protocol</span>=<span class="hljs-string">&quot;HTTP/1.1&quot;</span>
+           <span class="hljs-attr">connectionTimeout</span>=<span class="hljs-string">&quot;30000&quot;</span>
+           <span class="hljs-attr">redirectPort</span>=<span class="hljs-string">&quot;80&quot;</span> <span class="hljs-attr">maxThreads</span>=<span class="hljs-string">&quot;256&quot;</span> /&gt;</span>
+</code></pre>
+<ul>
+<li>port : &#x30EA;&#x30B9;&#x30CB;&#x30F3;&#x30B0;&#x30DD;&#x30FC;&#x30C8;&#x3092;&#x6307;&#x5B9A;</li>
+<li>ProxyPort : &#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30EA;&#x30C0;&#x30A4;&#x30EC;&#x30AF;&#x30C8;&#x6642;&#x306B;&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x306B;&#x8FD4;&#x3059;&#x30DD;&#x30FC;&#x30C8;</li>
+<li>connectionTimeout : &#x30B3;&#x30CD;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x30BF;&#x30A4;&#x30E0;&#x30A2;&#x30A6;&#x30C8;&#x5024;&#xFF08;&#x30DF;&#x30EA;&#x79D2;&#xFF09;</li>
+<li>maxThreads : &#x6700;&#x5927;&#x540C;&#x6642;&#x63A5;&#x7D9A;&#x6570;  </li>
+</ul>
+<p><a href="https://tomcat.apache.org/tomcat-8.0-doc/config/http.html" target="_blank">https://tomcat.apache.org/tomcat-8.0-doc/config/http.html</a>  </p>
+<h2 id="&#x30C7;&#x30D7;&#x30ED;&#x30A4;&#x8A2D;&#x5B9A;">&#x30C7;&#x30D7;&#x30ED;&#x30A4;&#x8A2D;&#x5B9A;</h2>
+<p>&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x306F;&#x30AA;&#x30FC;&#x30C8;&#x30C7;&#x30D7;&#x30ED;&#x30A4;&#x3001;WAR&#x306E;&#x81EA;&#x52D5;&#x5C55;&#x958B;&#x304C;&#x6709;&#x52B9;&#x5316;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;<br>&#x554F;&#x984C;&#x306A;&#x3051;&#x308C;&#x3070;&#x305D;&#x306E;&#x307E;&#x307E;  </p>
+<pre><code class="lang-xml"># vim ${CATALINA_HOME}/conf/server.xml
+
+<span class="hljs-tag">&lt;<span class="hljs-name">Host</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;localhost&quot;</span>  <span class="hljs-attr">appBase</span>=<span class="hljs-string">&quot;webapps&quot;</span>
+      <span class="hljs-attr">unpackWARs</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">autoDeploy</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
+</code></pre>
+<ul>
+<li>unpackWARs : WAR&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x81EA;&#x52D5;&#x3067;&#x5C55;&#x958B;&#x3057;&#x307E;&#x3059;&#x3002;  </li>
+<li>autoDeploy : <code>appBase</code>&#x914D;&#x4E0B;&#x306E;WAR&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x81EA;&#x52D5;&#x30C7;&#x30D7;&#x30ED;&#x30A4;&#x3057;&#x307E;&#x3059;&#x3002;  </li>
+</ul>
+<p>&#x81EA;&#x52D5;&#x3067;&#x30C7;&#x30D7;&#x30ED;&#x30A4;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x5834;&#x5408;&#x30C7;&#x30D7;&#x30ED;&#x30A4;&#x3055;&#x308C;&#x307E;&#x3059;  </p>
+<ul>
+<li>&#x30BF;&#x30A4;&#x30E0;&#x30B9;&#x30BF;&#x30F3;&#x30D7;&#x304C;&#x66F4;&#x65B0;&#x3055;&#x308C;&#x305F;</li>
+<li>&#x65B0;&#x898F;&#x306E;WAR&#x304C;&#x914D;&#x7F6E;&#x3055;&#x308C;&#x305F;</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#x3057;&#x306A;&#x3051;&#x308C;&#x3070;&#x306A;&#x3089;&#x306A;&#x3044;&#x70B9;&#x3068;&#x3057;&#x3066;&#x306F;tomcat&#x518D;&#x8D77;&#x52D5;&#x6642;&#x306B;<code>autoDeploy</code>&#x306F;&#x52D5;&#x304B;&#x306A;&#x3044;<br>tomcat&#x3092;&#x505C;&#x6B62;&#x3057;&#x65B0;&#x3057;&#x3044;WAR&#x3092;&#x914D;&#x7F6E;&#x3057;&#x3066;&#x3082;&#x8D77;&#x52D5;&#x6642;&#x306B;&#x30C7;&#x30D7;&#x30ED;&#x30A4;&#x3055;&#x308C;&#x308B;&#x306E;&#x306F;&#x65E2;&#x5B58;&#x306E;&#x5C55;&#x958B;&#x3055;&#x308C;&#x305F;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;<br>&#x305D;&#x306E;&#x5834;&#x5408;WAR&#x306E;&#x30BF;&#x30A4;&#x30E0;&#x30B9;&#x30BF;&#x30F3;&#x30D7;&#x3088;&#x308A;&#x5C55;&#x958B;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x30BF;&#x30A4;&#x30E0;&#x30B9;&#x30BF;&#x30F3;&#x30D7;&#x304C;&#x65B0;&#x3057;&#x304F;&#x306A;&#x308B;&#x305F;&#x3081;&#x3001;<br>&#x65B0;&#x3057;&#x3044;WAR&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F;&#x30C7;&#x30D7;&#x30ED;&#x30A4;&#x3055;&#x308C;&#x306A;&#x304F;&#x306A;&#x3063;&#x3066;&#x3057;&#x307E;&#x3046;  </p>
+<p>tomcat&#x306E;&#x505C;&#x6B62;&#x3092;&#x542B;&#x3080;&#x30EA;&#x30EA;&#x30FC;&#x30B9;&#x3092;&#x884C;&#x3044;&#x305F;&#x3044;&#x5834;&#x5408;&#x3001;<br>&#x505C;&#x6B62;&#x5F8C;&#x306B;<code>appBase</code>&#x914D;&#x4E0B;&#x3092;&#x524A;&#x9664;&#xFF08;&#x30AF;&#x30EA;&#x30FC;&#x30CB;&#x30F3;&#x30B0;&#xFF09;&#x3057;&#x3066;&#x304B;&#x3089;&#x914D;&#x5099;&#x3001;&#x8D77;&#x52D5;&#x3059;&#x308B;&#x304B;&#x3001;<br>&#x914D;&#x5099;&#x3001;&#x81EA;&#x52D5;&#x30C7;&#x30D7;&#x30ED;&#x30A4;&#x5F8C;&#x306B;&#x518D;&#x8D77;&#x52D5;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;  </p>
+<h2 id="&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x30ED;&#x30B0;">&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x30ED;&#x30B0;</h2>
+<p>tomcat&#x5074;&#x3067;&#x3082;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x30ED;&#x30B0;&#x3092;&#x51FA;&#x529B;&#x3059;&#x308B;&#x3088;&#x3046;&#x8A2D;&#x5B9A;<br>&#x30ED;&#x30B0;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30C3;&#x30C8;&#x3092;apache&#x3068;&#x540C;&#x69D8;&#x306B;&#x3059;&#x308B;&#x3053;&#x3068;&#x3082;&#x53EF;&#x80FD;  </p>
+<pre><code class="lang-xml"># vim ${CATARINA_HOME}/conf/server.xml
+
+<span class="hljs-tag">&lt;<span class="hljs-name">Valve</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;org.apache.catalina.valves.AccessLogValve&quot;</span> <span class="hljs-attr">directory</span>=<span class="hljs-string">&quot;logs&quot;</span>
+       <span class="hljs-attr">prefix</span>=<span class="hljs-string">&quot;tomcat-access&quot;</span> <span class="hljs-attr">suffix</span>=<span class="hljs-string">&quot;.log&quot;</span>
+       <span class="hljs-attr">pattern</span>=<span class="hljs-string">&apos;%h %l %u %t &quot;%r&quot; %s %b &quot;%{Referer}i&quot; &quot;%{User-Agent}i&quot; %D&apos;</span> /&gt;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1.configure_basic.html" class="navigation navigation-prev " aria-label="Previous page: 基本設定">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3.configure_db.html" class="navigation navigation-next " aria-label="Next page: DB接続設定">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"サーバ設定","level":"1.3.2","depth":2,"next":{"title":"DB接続設定","level":"1.3.3","depth":2,"path":"2.configure/3.configure_db.md","ref":"2.configure/3.configure_db.md","articles":[]},"previous":{"title":"基本設定","level":"1.3.1","depth":2,"path":"2.configure/1.configure_basic.md","ref":"2.configure/1.configure_basic.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"2.configure/2.configure_server.md","mtime":"2018-05-22T11:26:49.208Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-22T12:57:29.996Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

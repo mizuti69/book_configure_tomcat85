@@ -1,0 +1,485 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Tomcatnの自動起動設定 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../2.configure/" />
+    
+    
+    <link rel="prev" href="1.install_tomcat.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索すると入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Tomcatの導入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1.install_tomcat.html">
+            
+                <a href="1.install_tomcat.html">
+            
+                    
+                    Tomcatのインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="2.install_jsvc.html">
+            
+                <a href="2.install_jsvc.html">
+            
+                    
+                    Tomcatnの自動起動設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2.configure/">
+            
+                <a href="../2.configure/">
+            
+                    
+                    Tomcatの設定
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2.configure/1.configure_basic.html">
+            
+                <a href="../2.configure/1.configure_basic.html">
+            
+                    
+                    基本設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2.configure/2.configure_server.html">
+            
+                <a href="../2.configure/2.configure_server.html">
+            
+                    
+                    サーバ設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2.configure/3.configure_db.html">
+            
+                <a href="../2.configure/3.configure_db.html">
+            
+                    
+                    DB接続設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2.configure/5.configure_manager.html">
+            
+                <a href="../2.configure/5.configure_manager.html">
+            
+                    
+                    マネージャー設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../2.configure/6.configure_apache.html">
+            
+                <a href="../2.configure/6.configure_apache.html">
+            
+                    
+                    Apache連携設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GitBookで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Tomcatnの自動起動設定</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="tomcat&#x8D77;&#x52D5;&#x51E6;&#x7406;&#x306E;&#x4F5C;&#x6210;">Tomcat&#x8D77;&#x52D5;&#x51E6;&#x7406;&#x306E;&#x4F5C;&#x6210;</h1>
+<h2 id="jsvc&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x306E;&#x4F5C;&#x6210;">JSVC&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x306E;&#x4F5C;&#x6210;</h2>
+<p>tomcat&#x3068;java&#x304C;&#x3042;&#x308C;&#x3070;tomcat&#x306F;&#x3068;&#x308A;&#x3042;&#x3048;&#x305A;&#x52D5;&#x304B;&#x3059;&#x4E8B;&#x306F;&#x3067;&#x304D;&#x308B;<br>&#x901A;&#x5E38;&#x8D77;&#x52D5;&#x306E;&#x4ED6;&#x306B;&#x30C7;&#x30FC;&#x30E2;&#x30F3;&#x8D77;&#x52D5;&#x306E;&#x30C4;&#x30FC;&#x30EB;&#x304C;tomcat&#x306B;&#x306F;&#x7528;&#x610F;&#x3055;&#x308C;&#x3066;&#x3044;&#x3066;&#x3001;<br>&#x305D;&#x3061;&#x3089;&#x3092;&#x5229;&#x7528;&#x3057;&#x305F;&#x65B9;&#x304C;&#x3088;&#x308A;&#x30BB;&#x30AD;&#x30E5;&#x30A2;&#x306A;&#x305F;&#x3081;Tomcat&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x306F;JSVC&#x304B;&#x3089;&#x8D77;&#x52D5;&#x30FB;&#x505C;&#x6B62;&#x5236;&#x5FA1;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;  </p>
+<pre><code># cd ${CATALINA_HOME}/bin
+# tar xzf commons-daemon-native.tar.gz
+# cd commons-daemon-1.0.15-native-src/unix/
+# ./configure --with-java=/usr/java/latest
+# make
+</code></pre><p>&#x4F5C;&#x6210;&#x3055;&#x308C;&#x305F;JSVC&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x3092;<code>bin</code>&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x914D;&#x4E0B;&#x306B;&#x914D;&#x7F6E;&#x3057;&#x3066;&#x304A;&#x304D;&#x3001;<br>&#x4F5C;&#x6210;&#x5F8C;&#x30BD;&#x30FC;&#x30B9;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F;&#x524A;&#x9664;&#x3057;&#x3066;&#x304A;&#x304F;  </p>
+<pre><code># mv jsvc ../../
+# rm -rf commons-daemon-1.0.15-native-src
+</code></pre><h2 id="&#x8D77;&#x52D5;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x306E;&#x4F5C;&#x6210;">&#x8D77;&#x52D5;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x306E;&#x4F5C;&#x6210;</h2>
+<p>JSVC&#x3092;&#x30AD;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x8D77;&#x52D5;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x3092;&#x4F5C;&#x6210;&#x3057;tomcat&#x914D;&#x4E0B;&#x306B;&#x3067;&#x3082;&#x7F6E;&#x3044;&#x3066;&#x304A;&#x304F;  </p>
+<pre><code class="lang-bash"><span class="hljs-comment"># tomcat/bin/tomcat.sh</span>
+<span class="hljs-comment"># SAMPLE</span>
+<span class="hljs-meta">#!/bin/bash</span>
+<span class="hljs-comment">#</span>
+. /etc/rc.d/init.d/<span class="hljs-built_in">functions</span>
+<span class="hljs-built_in">umask</span> 002
+LANG=<span class="hljs-string">&quot;ja_JP.utf8&quot;</span>
+PIDFILE=/var/run/tomcat.pid
+LOCKFILE=/var/lock/subsys/tomcat
+
+CATALINA_HOME=/opt/app/tomcat
+CATALINA_BASE=/opt/app/tomcat
+CATALINA_OPTS=<span class="hljs-string">&quot;-server -Xmx1024m -Xms1024m -XX:MetaspaceSize=512m -XX:MaxMetaspaceSize=1024m -XX:CompressedClassSpaceSize=512m -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager&quot;</span>
+LOGDIR=<span class="hljs-variable">$CATALINA_HOME</span>/logs
+
+JAVA_HOME=/usr/java/latest
+JAVA_GCLOG=<span class="hljs-variable">$LOGDIR</span>/tomcat_gc.log
+JAVA_GC_MAX=5242880
+JAVA_GC_LIMIT=2
+
+TOMCAT_GCOPTIONS=<span class="hljs-string">&quot;-Xloggc:<span class="hljs-variable">$JAVA_GCLOG</span> -XX:+PrintGCDateStamps -XX:+PrintGCDetails -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=<span class="hljs-variable">$JAVA_GC_LIMIT</span> -XX:GCLogFileSize=<span class="hljs-variable">$JAVA_GC_MAX</span>&quot;</span>
+TOMCAT_USER=tomcat
+TOMCAT_TMP_DIR=/opt/app/tomcat/temp
+TOMCAT_LOG=<span class="hljs-string">&quot;-Djava.util.logging.config.file=<span class="hljs-variable">$CATALINA_BASE</span>/conf/logging.properties&quot;</span>
+
+DAEMON=<span class="hljs-variable">$CATALINA_HOME</span>/bin/jsvc
+
+CLASSPATH=\
+<span class="hljs-variable">$JAVA_HOME</span>/lib/tools.jar:\
+<span class="hljs-variable">$CATALINA_HOME</span>/lib/mysql-connector-java-5.1.39-bin.jar:\
+<span class="hljs-variable">$CATALINA_HOME</span>/bin/tomcat-juli.jar:\
+<span class="hljs-variable">$CATALINA_HOME</span>/bin/commons-daemon.jar:\
+<span class="hljs-variable">$CATALINA_HOME</span>/bin/bootstrap.jar:
+
+<span class="hljs-function"><span class="hljs-title">start</span></span>(){
+    <span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;Starting jsvc: &quot;</span>
+    <span class="hljs-variable">$DAEMON</span> \
+    -pidfile <span class="hljs-variable">$PIDFILE</span> \
+    -user <span class="hljs-variable">$TOMCAT_USER</span> \
+    -home <span class="hljs-variable">$JAVA_HOME</span> \
+    -outfile <span class="hljs-variable">$LOGDIR</span>/catalina.out \
+    -errfile <span class="hljs-string">&apos;&amp;1&apos;</span> \
+    <span class="hljs-variable">$TOMCAT_LOG</span> \
+    <span class="hljs-variable">$CATALINA_OPTS</span> \
+    <span class="hljs-variable">$CATALINA_SWITCH</span> \
+    <span class="hljs-variable">$TOMCAT_GCOPTIONS</span> \
+    -classpath <span class="hljs-variable">$CLASSPATH</span> \
+    -Dcatalina.home=<span class="hljs-variable">$CATALINA_HOME</span> \
+    -Dcatalina.base=<span class="hljs-variable">$CATALINA_BASE</span> \
+    -Djava.io.tmpdir=<span class="hljs-variable">$TOMCAT_TMP_DIR</span> \
+    org.apache.catalina.startup.Bootstrap
+
+    <span class="hljs-comment"># To get a verbose JVM</span>
+    <span class="hljs-comment">#-verbose \</span>
+    <span class="hljs-comment"># To get a debug of jsvc.</span>
+    <span class="hljs-comment">#-debug \</span>
+    RETVAL=$?
+    <span class="hljs-keyword">if</span> [ <span class="hljs-variable">$RETVAL</span> = 0 ]; <span class="hljs-keyword">then</span>
+        <span class="hljs-built_in">echo</span>_success
+        touch <span class="hljs-variable">$LOCKFILE</span>
+    <span class="hljs-keyword">else</span>
+        <span class="hljs-built_in">echo</span>_failure
+    <span class="hljs-keyword">fi</span>
+    <span class="hljs-built_in">echo</span>
+}
+
+<span class="hljs-function"><span class="hljs-title">stop</span></span>(){
+    <span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;Shutting down jsvc: &quot;</span>
+    <span class="hljs-variable">$DAEMON</span> \
+    -stop \
+    -pidfile <span class="hljs-variable">$PIDFILE</span> \
+    org.apache.catalina.startup.Bootstrap
+    RETVAL=$?
+    <span class="hljs-keyword">if</span> [ <span class="hljs-variable">$RETVAL</span> = 0 ]; <span class="hljs-keyword">then</span>
+        <span class="hljs-built_in">echo</span>_success
+        rm <span class="hljs-_">-f</span> <span class="hljs-variable">$PIDFILE</span> <span class="hljs-variable">$LOCKFILE</span>
+    <span class="hljs-keyword">else</span>
+        <span class="hljs-built_in">echo</span>_failure
+    <span class="hljs-keyword">fi</span>
+    <span class="hljs-built_in">echo</span>
+}
+
+<span class="hljs-keyword">case</span> <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> <span class="hljs-keyword">in</span>
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    status)
+        status <span class="hljs-variable">$DAEMON</span>
+        RETVAL=$?
+        ;;
+    *)
+        <span class="hljs-built_in">echo</span> $<span class="hljs-string">&quot;Usage: jsvc {start|stop|restart|status}&quot;</span>
+        <span class="hljs-built_in">exit</span> 1
+        ;;
+<span class="hljs-keyword">esac</span>
+</code></pre>
+<h2 id="&#x81EA;&#x52D5;&#x8D77;&#x52D5;&#x8A2D;&#x5B9A;">&#x81EA;&#x52D5;&#x8D77;&#x52D5;&#x8A2D;&#x5B9A;</h2>
+<p>&#x4F5C;&#x6210;&#x3057;&#x305F;&#x8D77;&#x52D5;&#x30FB;&#x505C;&#x6B62;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x3092;systemd&#x306B;&#x767B;&#x9332;&#x3057;&#x3001;&#x81EA;&#x52D5;&#x8D77;&#x52D5;&#x3059;&#x308B;&#x3088;&#x3046;&#x8A2D;&#x5B9A;  </p>
+<pre><code>&#x4F8B;&#xFF09;
+# vim /usr/lib/systemd/system/tomcat.service
+[Unit]
+Description = Tomcat service
+After=syslog.target network.target
+
+[Service]
+ExecStart = /opt/app/tomcat/bin/tomcat.sh start
+ExecStop = /opt/app/tomcat/bin/tomcat.sh stop
+Type = forking
+SuccessExitStatus = 143
+
+[Install]
+WantedBy = multi-user.target
+</code></pre><p>systemd&#x3078;&#x306E;&#x767B;&#x9332;&#x30FB;&#x81EA;&#x52D5;&#x8D77;&#x52D5;&#x8A2D;&#x5B9A;  </p>
+<pre><code># systemctl enable tomcat.service
+# systemctl start tomcat.service
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1.install_tomcat.html" class="navigation navigation-prev " aria-label="Previous page: Tomcatのインストール">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../2.configure/" class="navigation navigation-next " aria-label="Next page: Tomcatの設定">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Tomcatnの自動起動設定","level":"1.2.2","depth":2,"next":{"title":"Tomcatの設定","level":"1.3","depth":1,"path":"2.configure/index.md","ref":"2.configure/index.md","articles":[{"title":"基本設定","level":"1.3.1","depth":2,"path":"2.configure/1.configure_basic.md","ref":"2.configure/1.configure_basic.md","articles":[]},{"title":"サーバ設定","level":"1.3.2","depth":2,"path":"2.configure/2.configure_server.md","ref":"2.configure/2.configure_server.md","articles":[]},{"title":"DB接続設定","level":"1.3.3","depth":2,"path":"2.configure/3.configure_db.md","ref":"2.configure/3.configure_db.md","articles":[]},{"title":"マネージャー設定","level":"1.3.4","depth":2,"path":"2.configure/5.configure_manager.md","ref":"2.configure/5.configure_manager.md","articles":[]},{"title":"Apache連携設定","level":"1.3.5","depth":2,"path":"2.configure/6.configure_apache.md","ref":"2.configure/6.configure_apache.md","articles":[]}]},"previous":{"title":"Tomcatのインストール","level":"1.2.1","depth":2,"path":"1.install/1.install_tomcat.md","ref":"1.install/1.install_tomcat.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"1.install/2.install_jsvc.md","mtime":"2018-05-22T10:50:02.893Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-22T12:57:29.996Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,418 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>基本設定 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2.configure_server.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索すると入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1.install/">
+            
+                <a href="../1.install/">
+            
+                    
+                    Tomcatの導入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1.install/1.install_tomcat.html">
+            
+                <a href="../1.install/1.install_tomcat.html">
+            
+                    
+                    Tomcatのインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1.install/2.install_jsvc.html">
+            
+                <a href="../1.install/2.install_jsvc.html">
+            
+                    
+                    Tomcatnの自動起動設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Tomcatの設定
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="1.configure_basic.html">
+            
+                <a href="1.configure_basic.html">
+            
+                    
+                    基本設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2.configure_server.html">
+            
+                <a href="2.configure_server.html">
+            
+                    
+                    サーバ設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="3.configure_db.html">
+            
+                <a href="3.configure_db.html">
+            
+                    
+                    DB接続設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="5.configure_manager.html">
+            
+                <a href="5.configure_manager.html">
+            
+                    
+                    マネージャー設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="6.configure_apache.html">
+            
+                <a href="6.configure_apache.html">
+            
+                    
+                    Apache連携設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GitBookで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >基本設定</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x57FA;&#x672C;&#x8A2D;&#x5B9A;">&#x57FA;&#x672C;&#x8A2D;&#x5B9A;</h1>
+<h2 id="&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x60C5;&#x5831;&#x306E;&#x96A0;&#x853D;">&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x60C5;&#x5831;&#x306E;&#x96A0;&#x853D;</h2>
+<p>Tomcat&#x306E;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30A8;&#x30E9;&#x30FC;&#x30DA;&#x30FC;&#x30B8;&#x3084;&#x30D8;&#x30C3;&#x30C0;&#x30FC;&#x7B49;&#x306B;Tomcat&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x60C5;&#x5831;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x306A;&#x3044;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;  </p>
+<pre><code># cd ${CATALINA_HOME}/lib
+# jar xf catalina.jar org/apache/catalina/util/ServerInfo.properties
+</code></pre><p>&#x5C55;&#x958B;&#x3057;&#x305F;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x4FEE;&#x6B63;  </p>
+<pre><code># vim org/apache/catalina/util/ServerInfo.properties
+server.info=
+server.number=
+server.built=
+</code></pre><p>&#x518D;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;  </p>
+<pre><code># jar uf catalina.jar org/apache/catalina/util/ServerInfo.properties
+</code></pre><p>&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x60C5;&#x5831;&#x304C;&#x51FA;&#x529B;&#x3055;&#x308C;&#x306A;&#x3044;&#x3053;&#x3068;&#x3092;&#x78BA;&#x8A8D;  </p>
+<pre><code># ../bin/version.sh
+</code></pre><p>&#x5B8C;&#x4E86;&#x5F8C;&#x3001;&#x5C55;&#x958B;&#x3057;&#x305F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F;&#x524A;&#x9664;&#x3057;&#x3066;&#x304A;&#x304F;  </p>
+<pre><code># rm -rf org
+</code></pre><h2 id="&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x7BA1;&#x7406;">&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x7BA1;&#x7406;</h2>
+<p>Tomcat&#x304C;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x5229;&#x7528;&#x3059;&#x308B;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x30BF;&#x30A4;&#x30E0;&#x30A2;&#x30A6;&#x30C8;&#x5024;&#x3092;&#x8A2D;&#x5B9A;<br>&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x5074;&#x3067;&#x7528;&#x610F;&#x3057;&#x3066;&#x3044;&#x308B;<code>web.xml</code>&#x7B49;&#x3067;&#x5B9A;&#x7FA9;&#x3057;&#x3066;&#x3042;&#x308B;&#x5834;&#x5408;&#x306F;&#x305D;&#x3061;&#x3089;&#x304C;&#x512A;&#x5148;&#x3055;&#x308C;&#x308B;&#x304C;&#x3001;<br>&#x5B9A;&#x7FA9;&#x304C;&#x7121;&#x3044;&#x5834;&#x5408;tomcat&#x306E;&#x5024;&#x304C;&#x9069;&#x7528;&#x3055;&#x308C;&#x3066;&#x3057;&#x307E;&#x3046;&#x3053;&#x3068;&#x3082;&#x3042;&#x308B;&#x305F;&#x3081;&#x6CE8;&#x610F;&#x3059;&#x308B;  </p>
+<p>&#x3053;&#x3053;&#x3067;&#x306E;&#x8A2D;&#x5B9A;&#x306F;tomcat&#x306E;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3068;&#x3057;&#x3066;&#x6271;&#x308F;&#x308C;&#x308B;&#x70BA;&#x3001;&#x5404;&#x30B3;&#x30CD;&#x30AF;&#x30BF;&#x30FC;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x5F71;&#x97FF;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;<br>&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x304C;30&#x5206;&#x3068;&#x9577;&#x3044;&#x305F;&#x3081;&#x3001;&#x8A2D;&#x8A08;&#x306B;&#x57FA;&#x3065;&#x3044;&#x305F;&#x5024;&#x306B;&#x5909;&#x66F4;&#x3059;&#x308B;  </p>
+<pre><code class="lang-xml"># vim ${CATARINA_HOME}/conf/web.xml
+
+<span class="hljs-comment">&lt;!-- ==================== Default Session Configuration ================= --&gt;</span>
+<span class="hljs-comment">&lt;!-- You can set the default session timeout (in minutes) for all newly   --&gt;</span>
+<span class="hljs-comment">&lt;!-- created sessions by modifying the value below.                       --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">session-config</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">session-timeout</span>&gt;</span>30<span class="hljs-tag">&lt;/<span class="hljs-name">session-timeout</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">session-config</span>&gt;</span>
+</code></pre>
+<h2 id="&#x30ED;&#x30B0;&#x8A2D;&#x5B9A;">&#x30ED;&#x30B0;&#x8A2D;&#x5B9A;</h2>
+<ul>
+<li>&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30ED;&#x30B0;  </li>
+</ul>
+<p>&#x4E0D;&#x8981;&#x306A;&#x30ED;&#x30B0;&#x306F;&#x51FA;&#x529B;&#x3055;&#x308C;&#x306A;&#x3044;&#x3088;&#x3046;&#x8A2D;&#x5B9A;<br>&#x30DB;&#x30B9;&#x30C8;&#x30D9;&#x30FC;&#x30B9;&#x3067;tomcat&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x884C;&#x3063;&#x3066;&#x3044;&#x306A;&#x3044;&#x3051;&#x308C;&#x3070;&#x51FA;&#x529B;&#x3057;&#x306A;&#x3044;&#x3088;&#x3046;&#x30B3;&#x30E1;&#x30F3;&#x30C8;&#x30A2;&#x30A6;&#x30C8;&#x3059;&#x308B;  </p>
+<pre><code># vim ${CATALINA_HOME}/conf/logging.properties
+handlers = 1catalina.org.apache.juli.AsyncFileHandler, 3manager.org.apache.juli.AsyncFileHandler, java.util.logging.ConsoleHandler
+
+#2localhost.org.apache.juli.AsyncFileHandler.level = FINE
+#2localhost.org.apache.juli.AsyncFileHandler.directory = ${catalina.base}/logs
+#2localhost.org.apache.juli.AsyncFileHandler.prefix = localhost.
+
+#4host-manager.org.apache.juli.AsyncFileHandler.level = FINE
+#4host-manager.org.apache.juli.AsyncFileHandler.directory = ${catalina.base}/logs
+#4host-manager.org.apache.juli.AsyncFileHandler.prefix = host-manager.
+
+#org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/host-manager].level = INFO
+#org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/host-manager].handlers = 4host-manager.org.apache.juli.AsyncFileHandler
+</code></pre><ul>
+<li>&#x6A19;&#x6E96;&#x51FA;&#x529B;&#x30ED;&#x30B0;  </li>
+</ul>
+<p>JSVC&#x3067;&#x8D77;&#x52D5;&#x3057;&#x305F;&#x969B;&#x306E;tomcat&#x6A19;&#x6E96;&#x51FA;&#x529B;&#x30ED;&#x30AE;&#x30F3;&#x30B0;&#x8A2D;&#x5B9A;<br>&#x8D77;&#x52D5;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x5185;&#x306E;&#x8D77;&#x52D5;&#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#x306B;&#x8A18;&#x8F09;<br>&#x203B;&#x8D77;&#x52D5;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x53C2;&#x7167;  </p>
+<pre><code># vim tomcat.sh
+-outfile $LOGDIR/catalina.out \
+-errfile &apos;&amp;1&apos; \
+</code></pre><p><em>&#x30ED;&#x30B0;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;*</em><br>tomcat&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x30ED;&#x30B0;&#x4EE5;&#x5916;&#x306F;&#x81EA;&#x52D5;&#x3067;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;&#x3055;&#x308C;&#x306A;&#x3044;&#x305F;&#x3081;&#x3001;&#x30ED;&#x30FC;&#x30C6;&#x30FC;&#x30C8;&#x8A2D;&#x5B9A;&#x3092;&#x5FD8;&#x308C;&#x305A;&#x306B;  </p>
+<pre><code>&#x4F8B;&#xFF09;
+# vim /etc/logrotate.d/tomcat
+/opt/app/tomcat/logs/catalina.out
+{
+  daily
+  copytruncate
+  notifempty
+  missingok
+  su tomcat tomcat
+}
+</code></pre><h2 id="&#x4E0D;&#x8981;&#x306A;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x524A;&#x9664;">&#x4E0D;&#x8981;&#x306A;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x524A;&#x9664;</h2>
+<p>Tomcat&#x306B;&#x306F;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x7BA1;&#x7406;&#x7528;&#x3082;&#x542B;&#x3081;&#x5E7E;&#x3064;&#x304B;&#x306E;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x30A2;&#x30D7;&#x30EA;&#x304C;&#x914D;&#x7F6E;&#x3055;&#x308C;&#x3066;&#x308B;&#x304C;&#x57FA;&#x672C;&#x7684;&#x306B;&#x306F;&#x5168;&#x3066;&#x4E0D;&#x8981;&#x306A;&#x306E;&#x3067;&#x3001;&#x5FC5;&#x8981;&#x306A;&#x3044;&#x9650;&#x308A;&#x524A;&#x9664;<br><code>tomcat-manager</code>&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x30C7;&#x30D7;&#x30ED;&#x30A4;&#x3092;&#x884C;&#x306A;&#x3046;&#x5834;&#x5408;&#x306F;&#x6B8B;&#x3059;  </p>
+<pre><code># cd ${CATALINA_HOME}/webapps
+# rm -rf ROOT docs examples host-manager
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Tomcatの設定">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2.configure_server.html" class="navigation navigation-next " aria-label="Next page: サーバ設定">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"基本設定","level":"1.3.1","depth":2,"next":{"title":"サーバ設定","level":"1.3.2","depth":2,"path":"2.configure/2.configure_server.md","ref":"2.configure/2.configure_server.md","articles":[]},"previous":{"title":"Tomcatの設定","level":"1.3","depth":1,"path":"2.configure/index.md","ref":"2.configure/index.md","articles":[{"title":"基本設定","level":"1.3.1","depth":2,"path":"2.configure/1.configure_basic.md","ref":"2.configure/1.configure_basic.md","articles":[]},{"title":"サーバ設定","level":"1.3.2","depth":2,"path":"2.configure/2.configure_server.md","ref":"2.configure/2.configure_server.md","articles":[]},{"title":"DB接続設定","level":"1.3.3","depth":2,"path":"2.configure/3.configure_db.md","ref":"2.configure/3.configure_db.md","articles":[]},{"title":"マネージャー設定","level":"1.3.4","depth":2,"path":"2.configure/5.configure_manager.md","ref":"2.configure/5.configure_manager.md","articles":[]},{"title":"Apache連携設定","level":"1.3.5","depth":2,"path":"2.configure/6.configure_apache.md","ref":"2.configure/6.configure_apache.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"2.configure/1.configure_basic.md","mtime":"2018-05-22T12:20:58.763Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-22T12:57:29.996Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

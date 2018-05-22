@@ -1,0 +1,34 @@
+body,h1,h2,h3,ul,p,li {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Hiragino Kaku Gothic ProN,"メイリオ",meiryo,sans-serif;
+}
+
+h1 {
+  border-bottom: solid 3px;
+}
+
+pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+}
+
+.markdown-section pre>code {
+  font-size: 12px;  
+}
+
+.markdown-section pre {
+  margin-left: 10px;
+  background: #364549;
+  color: #e3e3e3;
+}
+
+.markdown-section p,pre {
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.markdown-section ul,li {
+  font-size: 13px;
+}
+
+.book-summary {
+  font-size: 12px;
+}
