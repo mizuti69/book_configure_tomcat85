@@ -1,27 +1,34 @@
 body,h1,h2,h3,ul,p,li {
-  font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
-}
-
-.comments-section * {
-  font-size: 14px;
-}
-
-.book-summary * {
-  color: white !important;
-  background-color: #3B170B; 
-}
-
-.chapter * {
-  font-size: 14px;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Hiragino Kaku Gothic ProN,"メイリオ",meiryo,sans-serif;
 }
 
 h1 {
-  padding: .25em 0 .5em .75em;
-  border-bottom: 2px solid #D8D8D8;
+  border-bottom: solid 3px;
 }
 
-h2,h3,h4,h5 {
-  padding: .25em 0 .5em .75em;
-  border-left: 10px solid #FFBE00;
-  border-bottom: 2px solid #D8D8D8;
+pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+}
+
+.markdown-section pre>code {
+  font-size: 12px;  
+}
+
+.markdown-section pre {
+  margin-left: 10px;
+  background: #364549;
+  color: #e3e3e3;
+}
+
+.markdown-section p,pre {
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.markdown-section ul,li {
+  font-size: 13px;
+}
+
+.book-summary {
+  font-size: 12px;
 }
