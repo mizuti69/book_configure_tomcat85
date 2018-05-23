@@ -29,6 +29,10 @@ pre {
   font-size: 13px;
 }
 
+.markdown-section table,th {
+  font-size: 13px;
+}
+
 .book-summary {
   font-size: 12px;
   background: #f7f2e0;
